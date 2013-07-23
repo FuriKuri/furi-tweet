@@ -10,7 +10,14 @@ describe 'Twitter User' do
     end
 
     it "provides the last five tweets from Twitter" do
-      @user.last_five_tweets.should have(5).tweets
+      tweets = [
+          "RT @cemerick: Code reuse is an absolute fucking myth.",
+          "Take the spider.io challenge. #spider_io http://t.co/XNmKQFSp",
+          "RT @unclebobmartin: Are you learning a functional language?  You'd better be!  My favorite, at the moment, is Clojure.",
+          "RT @zedshaw: RANDOM_STRING IS RANDOM: https://t.co/RWtiKrBa",
+          "RT @RomyOnRuby: I AM SO FURIOUS @ THE STORM the moment is over I am going to TATTOO THE #CLOJURE METACIRCULAR EVALUATOR on my back!! htt ..."
+      ]
+      @user.last_five_tweets.should == tweets
     end
   end
 end
